@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const User = require("./models/User");
+const User = require("../models/User");
 const jwt = require("jsonwebtoken");
 const auth = require("../middleware/auth");
 
@@ -26,7 +26,7 @@ router.post("/", async (req, res) => {
 
   //Generate Token and send it
   const jwtData = { id: user._id, name: user.name };
-  const token = jwt.sign(jwtData, process.env.JWTSECRET, { expires: "24hr" });
+  const token = jwt.sign(jwtData, process.env.JWTSECRET, { expiresIn: "24hr" });
   res.send({ token });
 });
 
