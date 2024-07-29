@@ -25,7 +25,7 @@ router.post("/", async (req, res) => {
   await user.save();
 
   //Generate Token and send it
-  const jwtData = { id: user_id, name: user.name };
+  const jwtData = { id: user._id, name: user.name };
   const token = jwt.sign(jwtData, process.env.JWTSECRET, { expires: "24hr" });
   res.send({ token });
 });
