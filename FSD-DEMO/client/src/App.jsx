@@ -9,9 +9,16 @@ import setAuthToken from "../utils/setAuthToken";
 let logUser;
 if (localStorage.token) {
   const jwt = localStorage.getItem("token");
+  console.log("JWT from localStorage:", jwt);  // Add this line
   setAuthToken(jwt);
-  logUser = jwtDecode(jwt);
+  try {
+    logUser = jwtDecode(jwt);
+    console.log("Decoded JWT:", logUser);  // Add this line
+  } catch (error) {
+    console.error("JWT decoding error:", error);
+  }
 }
+
 
 function App() {
   const [user, setUser] = useState(logUser);

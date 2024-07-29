@@ -3,9 +3,9 @@ import instance from "./http";
 // Getting the token from Node to React
 const setAuthToken = (token) => {
     if (token) {
-        instance.defaults.headers.authorization = `Bearer ${token}`;
+        instance.defaults.headers.common.Authorization = `Bearer ${token}`;
     } else {
-        delete instance.defaults.headers.authorization;
+        delete instance.defaults.headers.common.Authorization;
     }
 };
 
