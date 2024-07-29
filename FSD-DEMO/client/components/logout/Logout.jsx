@@ -1,9 +1,11 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 
 function Logout() {
-  return (
-    <div>Logout</div>
-  )
+  useEffect(() => {
+    localStorage.removeItem("token");
+    window.location = "/";
+  }, []);
+  return null;
 }
 
 export default Logout

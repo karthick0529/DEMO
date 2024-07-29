@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import jwtDecode from "jwt-decode";
+import { jwtDecode } from "jwt-decode";
 import "./App.css";
 import Navbar from "../components/navbar/Navbar";
 import Routing from "../components/routing/Routing";
@@ -8,10 +8,11 @@ import setAuthToken from "../utils/setAuthToken";
 
 let logUser;
 if (localStorage.token) {
-  const jwt = localstorage.getItem("token");
+  const jwt = localStorage.getItem("token");
   setAuthToken(jwt);
   logUser = jwtDecode(jwt);
 }
+
 function App() {
   const [user, setUser] = useState(logUser);
   console.log(user);
@@ -19,9 +20,9 @@ function App() {
     <Router>
       <div className="app">
         <Navbar user={user} />
-          <div className="main">
-            <Routing user={user} />
-          </div>
+        <div className="main">
+          <Routing user={user} />
+        </div>
       </div>
     </Router>
   );
