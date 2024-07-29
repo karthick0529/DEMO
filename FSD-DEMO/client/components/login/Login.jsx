@@ -32,7 +32,10 @@ function Login({ user }) {
       localStorage.setItem("token", data);
       window.location = "/";
     } catch (error) {
-      setError(error.response.data.message);
+      console.log(err);
+      if(error.response && error.response.status ===400){
+        setError(error.response.data.error);
+      }
     }
   };
   return (
