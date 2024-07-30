@@ -18,12 +18,12 @@
 }
 
 .signup_form {
-  background: #101010;
+  background: #646ee4;
   width: 300px;
   padding: 20px 30px;
   border-radius: 5px;
   font-size: 20px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(166, 201, 228, 0.24) 0px 3px 8px;
 }
 
 .signup_form label {
@@ -46,7 +46,7 @@ input[type="password"] {
 }
 
 .signup_form button {
-  background-color: #ffe400;
+  background-color: #ce4cab;
   color: #000;
   width: 100%;
   padding: 5px 10px;
