@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom'
 import "./Navbar.css"
 
 function Navbar({ user }) {
-    console.log("From navbar", user);
     return (
         <nav className='navbar'>
             <NavLink to='/'>Home</NavLink>
