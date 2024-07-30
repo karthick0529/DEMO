@@ -52,7 +52,7 @@ router.get("/", auth, async (req, res) => {
 
 router.put("/like/:id", auth, async (req, res) => {
   try {
-    const post = await Post.findById(req.params, id);
+    const post = await Post.findById(req.params.id);
 
     if (post.likes.includes(req.user._id)) {
       return res.status(400).json({ msg: "Post already liked" });
@@ -67,12 +67,12 @@ router.put("/like/:id", auth, async (req, res) => {
 
 // Comment a post
 
-router.put("/comment/:id", auth, async (req, res) => {
+router.post("/comment/:id", auth, async (req, res) => {
   const { text } = req.body;
 
   try {
     const post = await Post.findById(req.params.id);
-    const comment = {
+    const newComment = {
       user: req.user._id,
       text,
     };
