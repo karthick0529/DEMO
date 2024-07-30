@@ -1,14 +1,13 @@
-.navbar{
+.navbar {
     padding: 0 20px;
-    border-bottom: 1px solid #e5e5e5;
-    height :50px;
+    border-bottom: 1px solid #bcbcbc;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-.navbar a{
+.navbar a {
     color: white;
     text-decoration: none;
     margin: 0 15px;
@@ -19,11 +18,10 @@
 }
 
 .navbar a:hover{
-    background: black;
+    background: #10101072;
 }
 
-.navbar a.active{
-    background: black;
-    color:#ffe400;
-    
+.navbar a.active {
+    background: #101010;
+    color: #ffe400;
 }
