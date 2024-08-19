@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Save Phone Number</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <style>
+      /* Custom styles to adjust the width of the input */
+      #phoneNumber {
+        width: 100%;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Save Phone Number</h1>
+    <form id="save-number-form">
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        pattern="^[a-zA-Z]+$"
+        title="Name should only contain letters and no spaces."
+        required
+      />
+      <br /><br />
+      <label for="phoneNumber">Phone Number:</label>
+      <input
+        type="tel"
+        id="phoneNumber"
+        maxlength="10"
+        pattern="[6-9]{1}[0-9]{9}"
+        title="Please enter a valid 10-digit Indian phone number starting with 6-9."
+        required
+      />
+      <br /><br />
+      <button type="submit">Save Number</button>
+    </form>
+
+    <h2>Saved Numbers</h2>
+    <button id="fetch-numbers">Get All Numbers</button>
+    <ul id="number-list"></ul>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script>
+      // Initialize the intl-tel-input plugin with locked India flag
+      const phoneNumberInput = document.querySelector("#phoneNumber");
+      const iti = window.intlTelInput(phoneNumberInput, {
+        initialCountry: "in", // Set the default country to India
+        separateDialCode: true, // Display the dial code separately
+        onlyCountries: ["in"], // Lock the input to only accept Indian numbers
+        utilsScript:
+          "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js", // Load utility script for additional functionality
+      });
+
+      // Function to speak a message
+      function speakMessage(message) {
+        const synth = window.speechSynthesis;
+        const utterance = new SpeechSynthesisUtterance(message);
+        synth.speak(utterance);
+      }
+
+      document
+        .getElementById("save-number-form")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
+
+          const name = document.getElementById("name").value;
+          const rawPhoneNumber = phoneNumberInput.value; // Get the raw number entered
+          const phoneNumber = iti.getNumber(); // Get the full phone number including the country code
+
+          // Validate the raw 10-digit number without country code
+          const phoneRegex = /^[6-9]\d{9}$/;
+          if (!phoneRegex.test(rawPhoneNumber)) {
+            const errorMessage =
+              "Invalid phone number. Must be a 10-digit Indian number starting with 6-9.";
+            alert(errorMessage);
+            speakMessage(errorMessage);
+            return;
+          }
+
+          try {
+            const response = await fetch(
+              "http://localhost:3000/api/save-number",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ name, phoneNumber: rawPhoneNumber }), // Send raw 10-digit number
+              }
+            );
+
+            const result = await response.json();
+            if (response.ok) {
+              const successMessage =
+                result.message || "Number saved successfully!";
+              alert(successMessage);
+              speakMessage(`Number for ${name} saved successfully.`);
+            } else {
+              const errorMessage = result.error || "Error saving number.";
+              alert(errorMessage);
+              speakMessage(errorMessage);
+            }
+          } catch (error) {
+            const errorMessage = "Error saving number.";
+            alert(errorMessage);
+            speakMessage(errorMessage);
+            console.error(error);
+          }
+        });
+
+      // Handle fetching all saved numbers
+      document
+        .getElementById("fetch-numbers")
+        .addEventListener("click", async function () {
+          try {
+            const response = await fetch(
+              "http://localhost:3000/api/get-numbers"
+            );
+            const numbers = await response.json();
+
+            const numberList = document.getElementById("number-list");
+            numberList.innerHTML = "";
+
+            numbers.forEach((number) => {
+              const li = document.createElement("li");
+              li.textContent = `Name: ${number.name}, Phone: ${number.phoneNumber}`;
+              numberList.appendChild(li);
+            });
+          } catch (error) {
+            const errorMessage = "Error fetching numbers.";
+            alert(errorMessage);
+            speakMessage(errorMessage);
+            console.error(error);
+          }
+        });
+    </script>
+  </body>
+</html>
