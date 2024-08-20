@@ -456,7 +456,7 @@ function takeCommand(message) {
   } else if (message.includes("call")) {
     const name = message.split("call")[1]?.trim();
     if (name) {
-      fetch(`http://localhost:3000/api/call-contact/${name}`, {
+      fetch(`https://jarvis-ai-nu40.onrender.com/api/call-contact/${name}`, {
         method: "GET",
       })
         .then((response) => response.json())
