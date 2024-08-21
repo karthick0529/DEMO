@@ -19,7 +19,9 @@ const sendEmail = (options) => {
 
   transporter.sendMail(mailOptions, async (err, info) => {
     if (err) {
-      options.res.status(400).send("Connection timeout! Please try again later.");
+      options.res
+        .status(400)
+        .send("Connection timeout! Please try again later.");
     }
     if (info.response) {
       options.res.status(200).send("Email sent successfully");
