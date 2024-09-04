@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karthick - Personal Portfolio</title>
+
+    <!--
+    - favicon
+  -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo.ico"
+      type="image/x-icon"
+    />
+
+    <!--
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!--
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--
+    - #MAIN
+  -->
+
+    <main>
+      <!--
+      - #SIDEBAR
+    -->
+
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img
+              src="./assets/images/my-avatar.jpg"
+              alt="Karthick"
+              width="80"
+            />
+          </figure>
+
+          <div class="info-content">
+            <h1 class="name" title="Karthick">Karthick</h1>
+
+            <p class="title">Full Stack Developer</p>
+          </div>
+
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
+
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+        </div>
+
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
+
+          <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+
+                <a href="karthicknandha619@gmail.com" class="contact-link"
+                  >karthicknandha619@gmail.com</a
+                >
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Phone</p>
+
+                <a href="tel:+917708241989" class="contact-link"
+                  >+91 7708241989</a
+                >
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="calendar-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Birthday</p>
+
+                <time datetime="1999-10-29">October 29, 1999</time>
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
+
+                <address>Jothipuram, Coimbatore-641047</address>
+              </div>
+            </li>
+          </ul>
+
+          <div class="separator"></div>
+
+          <ul class="social-list">
+            <li class="social-item">
+              <a href="https://github.com/karthick0529" class="social-link" target="_blank" rel="noopener noreferrer">
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+            </li>
+          
+            <li class="social-item">
+              <a href="https://www.linkedin.com/in/karthick-r-85a730269" class="social-link" target="_blank" rel="noopener noreferrer">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+          
+            <li class="social-item">
+              <a href="https://www.instagram.com/mr.unique_1029/" class="social-link" target="_blank" rel="noopener noreferrer">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+          </ul>
+          
+          </ul>
+        </div>
+      </aside>
+
+      <!--
+      - #main-content
+    -->
+
+      <div class="main-content">
+        <!--
+        - #NAVBAR
+      -->
+
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <button class="navbar-link active" data-nav-link>About</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Resume</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Portfolio</button>
+            </li>
+
+            <!-- <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li> -->
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Contact</button>
+            </li>
+          </ul>
+        </nav>
+
+        <!--
+        - #ABOUT
+      -->
+
+        <article class="about active" data-page="about">
+          <header>
+            <h2 class="h2 article-title">About me</h2>
+          </header>
+
+          <section class="about-text">
+            <p>
+              I'm Karthick, an IT professional with 2.6 years of experience at
+              Cognizant Technology Solutions. I began my career in Mainframe
+              development, honing my skills in maintaining and enhancing legacy
+              systems essential to business operations. This experience provided
+              me with a solid foundation in problem-solving, attention to
+              detail, and working with complex systems.
+            </p>
+            <p>
+              To stay ahead in the evolving tech landscape, I transitioned into
+              Full Stack Development and completed a comprehensive MERN stack
+              course from GUVI. This shift has allowed me to specialize in
+              modern web development, where I actively contribute to building
+              dynamic, responsive, and user-focused web applications.
+            </p>
+            <p>My skill set includes:</p>
+            <ul>
+              <li>
+                <strong>Frontend Development:</strong> Proficient in HTML, CSS,
+                JavaScript, and React.js, creating engaging, responsive user
+                interfaces.
+              </li>
+              <li>
+                <strong>Backend Development:</strong> Skilled in Node.js and
+                Express.js, developing robust, scalable backend services.
+              </li>
+              <li>
+                <strong>Database Management:</strong> Experienced with MongoDB,
+                ensuring high performance and reliable data management.
+              </li>
+              <li>
+                <strong>Version Control:</strong> Proficient in Git, maintaining
+                organized, collaborative codebases for smooth project
+                development.
+              </li>
+            </ul>
+            <p>
+              I am a proactive learner, always eager to embrace new challenges
+              and growth opportunities. I thrive in collaborative environments
+              and am passionate about working on projects that push the
+              boundaries of technology. Whether optimizing an existing system or
+              building from the ground up, I am dedicated to delivering
+              high-quality results.
+            </p>
+            <p>
+              I'm excited to apply my unique blend of Mainframe and Full Stack
+              Development expertise to innovative projects that drive business
+              success.
+            </p>
+          </section>
+
+          <!--
+          - service
+        -->
+
+          <section class="service">
+            <h3 class="h3 service-title">Specializations</h3>
+
+            <ul class="service-list">
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-dev.svg"
+                    alt="Full Stack Development Icon"
+                    width="40"
+                  />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Full Stack Development</h4>
+
+                  <p class="service-item-text">
+                    Offering comprehensive development services for both
+                    frontend and backend. Expertise in building dynamic web
+                    applications using the MERN stack (MongoDB, Express.js,
+                    React.js, Node.js) and integrating various APIs and
+                    services.
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-db.png"
+                    alt="Database Management Icon"
+                    width="40"
+                  />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Database Management</h4>
+
+                  <p class="service-item-text">
+                    Skilled in designing, implementing, and managing databases
+                    using MySQL and MongoDB, focusing on efficient data storage,
+                    retrieval, and performance optimization.
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-cloud.png"
+                    alt="Cloud Deployment Icon"
+                    width="40"
+                  />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Cloud Deployment</h4>
+
+                  <p class="service-item-text">
+                    Proficient in deploying applications and managing
+                    infrastructure using cloud services like Google Cloud and
+                    AWS, and deployment platforms such as Render, Netlify, and
+                    Vercel.
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-ui.png"
+                    alt="UI/UX Design Icon"
+                    width="40"
+                  />
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">UI/UX Design</h4>
+
+                  <p class="service-item-text">
+                    Expertise in creating user-centric designs with modern tools
+                    and frameworks, including Bootstrap and Material-UI, to
+                    enhance user experience and interface design.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!--
+          - testimonials modal
+        -->
+
+          <div class="modal-container" data-modal-container>
+            <div class="overlay" data-overlay></div>
+
+            <section class="testimonials-modal">
+              <button class="modal-close-btn" data-modal-close-btn>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+
+              <div class="modal-img-wrapper">
+                <figure class="modal-avatar-box">
+                  <img
+                    src="./assets/images/avatar-1.png"
+                    alt="Daniel lewis"
+                    width="80"
+                    data-modal-img
+                  />
+                </figure>
+
+                <img src="./assets/images/icon-quote.svg" alt="quote icon" />
+              </div>
+
+              <div class="modal-content">
+                <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+                <time datetime="2021-06-14">14 June, 2021</time>
+
+                <div data-modal-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were
+                    very pleased with the work done. She has a lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum
+                    dolor sit amet, ullamcous cididt consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels
+                    dolore magnarels alia.
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!--
+          - clients
+        -->
+
+          <section class="clients">
+            <h3 class="h3 clients-title">Certificates</h3>
+
+            <ul class="clients-list has-scrollbar">
+              <li class="certificates-item">
+                <div class="content-card" data-certificates-item>
+                  <figure class="certificates-image-box">
+                    <img
+                      src="./assets/images/Full-Stack.png"
+                      alt="Full Stack Development"
+                      width="300"
+                    />
+                  </figure>
+                  <h4
+                    class="h4 certificates-item-title"
+                    data-certificates-title
+                  >
+                    Full Stack Development
+                  </h4>
+                </div>
+              </li>
+
+              <!-- Certificate 2 -->
+              <li class="certificates-item">
+                <div class="content-card" data-certificates-item>
+                  <figure class="certificates-image-box">
+                    <img
+                      src="./assets/images/ReactJS.png"
+                      alt="React"
+                      width="300"
+                    />
+                  </figure>
+                  <h4
+                    class="h4 certificates-item-title"
+                    data-certificates-title
+                  >
+                    React
+                  </h4>
+                </div>
+              </li>
+
+              <!-- Certificate 3 -->
+              <li class="certificates-item">
+                <div class="content-card" data-certificates-item>
+                  <figure class="certificates-image-box">
+                    <img
+                      src="./assets/images/Bootstrap.png"
+                      alt="Bootstrap"
+                      width="300"
+                    />
+                  </figure>
+                  <h4
+                    class="h4 certificates-item-title"
+                    data-certificates-title
+                  >
+                    Bootstrap
+                  </h4>
+                </div>
+              </li>
+
+              <!-- Certificate 4 -->
+              <li class="certificates-item">
+                <div class="content-card" data-certificates-item>
+                  <figure class="certificates-image-box">
+                    <img
+                      src="./assets/images/HTML.png"
+                      alt="HTML"
+                      width="300"
+                    />
+                  </figure>
+                  <h4
+                    class="h4 certificates-item-title"
+                    data-certificates-title
+                  >
+                    HTML
+                  </h4>
+                </div>
+              </li>
+
+              <!-- Certificate 5 -->
+              <li class="certificates-item">
+                <div class="content-card" data-certificates-item>
+                  <figure class="certificates-image-box">
+                    <img src="./assets/images/CSS3.png" alt="CSS" width="300" />
+                  </figure>
+                  <h4
+                    class="h4 certificates-item-title"
+                    data-certificates-title
+                  >
+                    CSS3
+                  </h4>
+                </div>
+              </li>
+
+              <!-- Certificate 6 -->
+              <li class="certificates-item">
+                <div class="content-card" data-certificates-item>
+                  <figure class="certificates-image-box">
+                    <img
+                      src="./assets/images/MySQL.png"
+                      alt="MySQL"
+                      width="300"
+                    />
+                  </figure>
+                  <h4
+                    class="h4 certificates-item-title"
+                    data-certificates-title
+                  >
+                    MySQL
+                  </h4>
+                </div>
+              </li>
+
+              <!-- Certificate 7 -->
+              <li class="certificates-item">
+                <div class="content-card" data-certificates-item>
+                  <figure class="certificates-image-box">
+                    <img
+                      src="./assets/images/Javascript.png"
+                      alt="Javascript"
+                      width="300"
+                    />
+                  </figure>
+                  <h4
+                    class="h4 certificates-item-title"
+                    data-certificates-title
+                  >
+                    Javascript
+                  </h4>
+                </div>
+              </li>
+
+              <!-- Certificate 8 -->
+              <li class="certificates-item">
+                <div class="content-card" data-certificates-item>
+                  <figure class="certificates-image-box">
+                    <img
+                      src="./assets/images/MongoDb.png"
+                      alt="MongoDB"
+                      width="300"
+                    />
+                  </figure>
+                  <h4
+                    class="h4 certificates-item-title"
+                    data-certificates-title
+                  >
+                    MongoDB
+                  </h4>
+                </div>
+              </li>
+
+              <!-- Certificate 9 -->
+              <li class="certificates-item">
+                <div class="content-card" data-certificates-item>
+                  <figure class="certificates-image-box">
+                    <img
+                      src="./assets/images/NodeJS.png"
+                      alt="NodeJS"
+                      width="300"
+                    />
+                  </figure>
+                  <h4
+                    class="h4 certificates-item-title"
+                    data-certificates-title
+                  >
+                    NodeJS
+                  </h4>
+                </div>
+              </li>
+
+              <!-- Certificate 10 -->
+              <li class="certificates-item">
+                <div class="content-card" data-certificates-item>
+                  <figure class="certificates-image-box">
+                    <img src="./assets/images/AWS.jpg" alt="AWS" width="300" />
+                  </figure>
+                  <h4
+                    class="h4 certificates-item-title"
+                    data-certificates-title
+                  >
+                    AWS Partner: Generative AI on AWS Essentials
+                  </h4>
+                </div>
+              </li>
+
+              <!-- Certificate 11 -->
+              <li class="certificates-item">
+                <div class="content-card" data-certificates-item>
+                  <figure class="certificates-image-box">
+                    <img src="./assets/images/AWS2.jpg" alt="AWS" width="300" />
+                  </figure>
+                  <h4
+                    class="h4 certificates-item-title"
+                    data-certificates-title
+                  >
+                    Amazon CodeWhisperer
+                  </h4>
+                </div>
+              </li>
+
+              <li class="certificates-item">
+                <div class="content-card" data-certificates-item>
+                  <figure class="certificates-image-box">
+                    <img src="./assets/images/UI-UX.png" alt="UI/UX" width="300" />
+                  </figure>
+                  <h4
+                    class="h4 certificates-item-title"
+                    data-certificates-title
+                  >
+                    UI/UX for Beginners
+                  </h4>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </article>
+
+        <!--
+        - #RESUME
+      -->
+
+        <article class="resume" data-page="resume">
+          <header>
+            <h2 class="h2 article-title">Resume</h2>
+          </header>
+
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Education</h3>
+            </div>
+
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  KG College of Arts and Science
+                </h4>
+                <span>2017 — 2020</span>
+                <p class="timeline-text">
+                  Bachelor of Science in Computer Science with a 78% grade.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Vivekam Matric Higher Secondary School
+                </h4>
+                <span>2016 — 2017</span>
+                <p class="timeline-text">
+                  Completed my high school with a 91.33% grade.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Vivekam Matric Higher Secondary School
+                </h4>
+                <span>2014 — 2015</span>
+                <p class="timeline-text">
+                  Completed my secondary education with a 96.4% grade.
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Experience</h3>
+            </div>
+
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Programmer Analyst</h4>
+                <span>2023 — 2024</span>
+                <p class="timeline-text">
+                  Worked as a Programmer Analyst at Cognizant Technology
+                  Solutions, where I was responsible for delivering efficient
+                  technical solutions, managing projects, and enhancing software
+                  systems for various clients.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Programmer</h4>
+                <span>2022 — 2023</span>
+                <p class="timeline-text">
+                  Worked as a Programmer at Cognizant Technology Solutions,
+                  focusing on backend development and collaborating with
+                  cross-functional teams to implement and optimize business
+                  solutions.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Programmer Trainee</h4>
+                <span>2021 — 2022</span>
+                <p class="timeline-text">
+                  Joined Cognizant Technology Solutions as a Programmer Trainee,
+                  where I gained foundational experience in software
+                  development, debugging, and maintaining mainframe
+                  applications.
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <section class="skill">
+            <h3 class="h3 skills-title">My Skills</h3>
+          
+            <ul class="skills-list">
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <img src="./assets/images/HTML-icon.png" alt="HTML Icon" class="skill-icon" />
+                  <h5 class="h5">HTML</h5>
+                </div>
+              </li>
+          
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <img src="./assets/images/CSS3-icon.png" alt="CSS Icon" class="skill-icon" />
+                  <h5 class="h5">CSS</h5>
+                </div>
+              </li>
+          
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <img src="./assets/images/Javascript-icon.png" alt="JavaScript Icon" class="skill-icon" />
+                  <h5 class="h5">JavaScript</h5>
+                </div>
+              </li>
+          
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React.js Icon" class="skill-icon" />
+                  <h5 class="h5">React.js</h5>
+                </div>
+              </li>
+          
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <img src="./assets/images/node-icon.png" alt="Node.js Icon" class="skill-icon" />
+                  <h5 class="h5">Node.js</h5>
+                </div>
+              </li>
+          
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <img src="./assets/images/express-icon.png" alt="Express.js Icon" class="skill-icon" />
+                  <h5 class="h5">Express.js</h5>
+                </div>
+              </li>
+          
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <img src="./assets/images/mongodb-icon.png" alt="MongoDB Icon" class="skill-icon" />
+                  <h5 class="h5">MongoDB</h5>
+                </div>
+              </li>
+          
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <img src="./assets/images/mysql-icon.png" alt="MySQL Icon" class="skill-icon" />
+                  <h5 class="h5">MySQL</h5>
+                </div>
+              </li>
+          
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <img src="./assets/images/bootstrap-icon.png" alt="Bootstrap Icon" class="skill-icon" />
+                  <h5 class="h5">Bootstrap</h5>
+                </div>
+              </li>
+          
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <img src="https://mui.com/static/logo.png" alt="Material-UI Icon" class="skill-icon" />
+                  <h5 class="h5">Material-UI</h5>
+                </div>
+              </li>
+          
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <img src="./assets/images/mainframe-icon.png" alt="Mainframe Icon" class="skill-icon" />
+                  <h5 class="h5">Mainframe</h5>
+                </div>
+              </li>
+          
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <img src="./assets/images/googlecloud-icon.png" alt="Google Cloud Icon" class="skill-icon" />
+                  <h5 class="h5">Google Cloud</h5>
+                </div>
+              </li>
+          
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <img src="https://aws.amazon.com/favicon.ico" alt="AWS Icon" class="skill-icon" />
+                  <h5 class="h5">AWS</h5>
+                </div>
+              </li>
+          
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <img src="./assets/images/render-icon.png" alt="Render Icon" class="skill-icon" />
+                  <h5 class="h5">Render</h5>
+                </div>
+              </li>
+          
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <img src="./assets/images/netlify-icon.png" alt="Netlify Icon" class="skill-icon" />
+                  <h5 class="h5">Netlify</h5>
+                </div>
+              </li>
+          
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <img src="./assets/images/vercel-icon.png" alt="Vercel Icon" class="skill-icon" />
+                  <h5 class="h5">Vercel</h5>
+                </div>
+              </li>
+            </ul>
+          </section>
+          
+        </article>
+
+        <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+      
+        <section class="projects">
+          <ul class="filter-list">
+            <li class="filter-item">
+              <button class="active" data-filter-btn>Projects</button>
+            </li>
+          </ul>
+      
+          <div class="filter-select-box">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-select-value>
+                Select category
+              </div>
+      
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+            </button>
+      
+            <ul class="select-list">
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+            </ul>
+          </div>
+      
+          <ul class="project-list">
+            <li class="project-item active" data-filter-item data-category="all">
+              <a href="https://unique-sorbet-9172d3.netlify.app">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <div class="project-item-icon-box">
+                    <ion-icon name="link-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/Wildlens.png" alt="Wildlens tourism" loading="lazy" />
+                </figure>
+      
+                <h3 class="project-title">WildLens Tour</h3>
+      
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+      
+            <li class="project-item active" data-filter-item data-category="all">
+              <a href="https://regal-tartufo-ceec92.netlify.app/">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <div class="project-item-icon-box">
+                    <ion-icon name="link-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/Cleanease.png" alt="Cleanease" loading="lazy" />
+                </figure>
+      
+                <h3 class="project-title">Clean-Ease</h3>
+      
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+            
+            <li class="project-item active" data-filter-item data-category="all">
+              <a href="https://boisterous-faun-731be0.netlify.app/">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <div class="project-item-icon-box">
+                    <ion-icon name="link-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/password-reset.png" alt="Password-reset" loading="lazy" />
+                </figure>
+      
+                <h3 class="project-title">Password-Reset</h3>
+      
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+            
+            <li class="project-item active" data-filter-item data-category="all">
+              <a href="https://musical-vacherin-8845a7.netlify.app/">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <div class="project-item-icon-box">
+                    <ion-icon name="link-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/Redux-Cart.png" alt="Redux-Add-to-Cart" loading="lazy" />
+                </figure>
+      
+                <h3 class="project-title">Add-to-Cart Using Redux</h3>
+      
+                <p class="project-category">Web application</p>
+              </a>
+            </li>
+            
+          </ul>
+        </section>
+      </article>
+      
+        <!--
+        - #BLOG
+      -->
+
+        <article class="blog" data-page="blog">
+          <header>
+            <h2 class="h2 article-title">Blog</h2>
+          </header>
+
+          <section class="blog-posts">
+            <ul class="blog-posts-list">
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog-1.jpg"
+                      alt="Design conferences in 2022"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Design</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2022-02-23">Fab 23, 2022</time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">
+                      Design conferences in 2022
+                    </h3>
+
+                    <p class="blog-text">
+                      Veritatis et quasi architecto beatae vitae dicta sunt,
+                      explicabo.
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog-2.jpg"
+                      alt="Best fonts every designer"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Design</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2022-02-23">Fab 23, 2022</time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">
+                      Best fonts every designer
+                    </h3>
+
+                    <p class="blog-text">
+                      Sed ut perspiciatis, nam libero tempore, cum soluta nobis
+                      est eligendi.
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog-3.jpg"
+                      alt="Design digest #80"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Design</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2022-02-23">Fab 23, 2022</time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">Design digest #80</h3>
+
+                    <p class="blog-text">
+                      Excepteur sint occaecat cupidatat no proident, quis
+                      nostrum exercitationem ullam corporis suscipit.
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog-4.jpg"
+                      alt="UI interactions of the week"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Design</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2022-02-23">Fab 23, 2022</time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">
+                      UI interactions of the week
+                    </h3>
+
+                    <p class="blog-text">
+                      Enim ad minim veniam, consectetur adipiscing elit, quis
+                      nostrud exercitation ullamco laboris nisi.
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog-5.jpg"
+                      alt="The forgotten art of spacing"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Design</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2022-02-23">Fab 23, 2022</time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">
+                      The forgotten art of spacing
+                    </h3>
+
+                    <p class="blog-text">
+                      Maxime placeat, sed do eiusmod tempor incididunt ut labore
+                      et dolore magna aliqua.
+                    </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="blog-post-item">
+                <a href="#">
+                  <figure class="blog-banner-box">
+                    <img
+                      src="./assets/images/blog-6.jpg"
+                      alt="Design digest #79"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Design</p>
+
+                      <span class="dot"></span>
+
+                      <time datetime="2022-02-23">Fab 23, 2022</time>
+                    </div>
+
+                    <h3 class="h3 blog-item-title">Design digest #79</h3>
+
+                    <p class="blog-text">
+                      Optio cumque nihil impedit uo minus quod maxime placeat,
+                      velit esse cillum.
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </article>
+
+        <!--
+        - #CONTACT
+      -->
+
+        <article class="contact" data-page="contact">
+          <header>
+            <h2 class="h2 article-title">Contact</h2>
+          </header>
+
+          <section class="mapbox" data-mapbox>
+            <figure>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1242.788868066468!2d76.95041052111006!3d11.163183358616328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1sen!2sin!4v1725372784547!5m2!1sen!2sin"
+                width="400"
+                height="300"
+                loading="lazy"
+              >
+              </iframe>
+            </figure>
+          </section>
+
+          <section class="contact-form">
+            <h3 class="h3 form-title">Contact Form</h3>
+
+            <form
+              action="https://formspree.io/f/mjkbzgpk"
+              method="POST"
+              class="form"
+            >
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  name="fullname"
+                  class="form-input"
+                  placeholder="Full name"
+                  required
+                />
+
+                <input
+                  type="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="Email address"
+                  required
+                />
+              </div>
+
+              <textarea
+                name="message"
+                class="form-input"
+                placeholder="Your Message"
+                required
+              ></textarea>
+
+              <button class="form-btn" type="submit">
+                <ion-icon name="paper-plane"></ion-icon>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <!--
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+
+    <!--
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
